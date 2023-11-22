@@ -6,10 +6,15 @@
     <title>Ejercicio 4: Selección de Elementos con `querySelectorAll`</title>
   </head>
   <body>
-    <!-- Escribe tu codigo html aqui -->
+    <p>Párrafo 1</p>
+    <p>Párrafo 2</p>
+    <p>Párrafo 3</p>
 
     <script>
-      // Escribe tu codigo javascript aqui
+      const elementos=document.querySelectorAll('p')
+      elementos.forEach((elemento)=>{
+        elemento.style.display='none'
+      })
     </script>
   </body>
 </html>
