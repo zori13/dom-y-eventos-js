@@ -6,10 +6,20 @@
     <title>Ejercicio 14: Detener la Propagación de Evento</title>
   </head>
   <body>
-    <!-- Escribe tu codigo html aqui -->
+    <div id="epadre">
+      <div id="ehijo">Haz click aquí</div>
+    </div>
 
     <script>
-      // Escribe tu codigo javascript aqui
+      const hijo =document.getElementById('ehijo')
+      hijo.addEventListener('click', (evento)=>{
+        evento.stopPropagation()
+        alert('Evento hijo')
+      })
+      const padre=document.getElementById('epadre')
+      padre.addEventListener('click',()=>{
+        alert('Evento padre')
+      })
     </script>
   </body>
 </html>
