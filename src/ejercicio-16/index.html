@@ -6,10 +6,22 @@
     <title>Ejercicio 16: Temporizador de Evento Personalizado</title>
   </head>
   <body>
-    <!-- Escribe tu codigo html aqui -->
+    <button id="miBoton">Iniciar Temporizador</button>   
 
     <script>
-      // Escribe tu codigo javascript aqui
+      const boton=document.getElementById('miBoton')
+      function iniciarTemporizador() {
+        setTimeout(() => {
+          const eventoPersonalizado= new Event ('eventoPersonalizado')
+          boton.dispatchEvent(eventoPersonalizado)
+        },3000)
+      }
+      boton.addEventListener('eventoPersonalizado', ()=>{
+        alert('Evento personalizado disparado')
+      })
+      boton.addEventListener('click',()=>{
+        iniciarTemporizador()
+      })
     </script>
   </body>
 </html>
