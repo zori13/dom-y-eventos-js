@@ -6,10 +6,15 @@
     <title>Ejercicio 11: Eliminar Elemento con `removeChild`</title>
   </head>
   <body>
-    <!-- Escribe tu codigo html aqui -->
+    <div id="contenedor">
+        <div id="elementoParaBorrar">Elemento a eliminar</div>
+    </div>
 
     <script>
-      // Escribe tu codigo javascript aqui
+      const elementoParaBorrar=document.getElementById
+      ('elementoParaBorrar')
+      const padre=elementoParaBorrar.parentElement
+      padre.removeChild(elementoParaBorrar)
     </script>
   </body>
 </html>
